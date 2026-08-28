@@ -131,3 +131,25 @@ a:focus-visible,.share-btn:focus-visible{outline:3px solid var(--ink);outline-of
   .block{padding:2.2rem 1.2rem;}
   .year-card{transform:none !important;}
 }
+
+/* ---------- BLOC "LE LIEU" (page année) ---------- */
+.place-card{
+  background:#fff;
+  border:2px dashed var(--pine);
+  border-radius:10px;
+  padding:1.6rem 1.5rem;
+  box-shadow:var(--shadow);
+}
+.place-name{font-family:var(--font-hand);font-size:2rem;font-weight:700;color:var(--rust);margin:0 0 .3rem;}
+.place-addr{font-weight:700;margin:0 0 .4rem;color:var(--ink);}
+.place-desc{margin:0 0 1.2rem;color:var(--ink-soft);font-weight:600;}
+.place-links{display:flex;flex-wrap:wrap;gap:.8rem;}
+.place-btn{
+  display:inline-flex;align-items:center;gap:.4rem;
+  font-family:var(--font-hand);font-size:1.3rem;font-weight:700;
+  text-decoration:none;color:#fff;padding:.35rem 1.2rem;border-radius:999px;
+  box-shadow:var(--shadow);transition:transform .15s ease;
+}
+.place-btn:hover{transform:translateY(-3px);}
+.place-btn.site{background:var(--sky);}
+.place-btn.insta{background:var(--terra);}
