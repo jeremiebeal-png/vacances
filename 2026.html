@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Été 2026 — La Bande</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="year-page">
+
+<div class="topbar">
+  <a class="back-link" href="index.html">← Toutes les années</a>
+  <span class="badge">Été 2026</span>
+</div>
+
+<!-- ============ EN-TÊTE DE L'ANNÉE ============ -->
+<header class="year-hero h2026">
+  <h1>2026</h1>
+  <!-- 👉 Remplacez "Lieu à venir" par le lieu (ex : Corse, Cap Ferret…) -->
+  <span class="place">📍 Lieu à venir</span>
+</header>
+
+<!-- ============ PHOTOS & VIDÉOS COURTES ============ -->
+<section class="block">
+  <div class="block-head"><span class="block-emoji">📸</span><h2>Photos & vidéos</h2></div>
+
+  <div class="block-note">
+    Chacun ajoute ses photos et ses vidéos de 30 s ici, en libre-service.
+    Cliquez sur le bouton pour ouvrir l'album partagé, puis « Ajouter des photos ».
+  </div>
+
+  <!-- ▼▼▼ ZONE ALBUM GOOGLE PHOTOS ▼▼▼
+       1. Créez un album dans Google Photos (un par année).
+       2. Partagez-le → activez "Autoriser l'ajout de photos".
+       3. Copiez le lien de partage et collez-le dans le href du bouton ci-dessous.
+       (L'intégration visuelle de l'album se colle à la place du bloc .placeholder si vous
+        générez un code d'intégration — sinon le bouton suffit largement.) -->
+
+  <p style="margin:0 0 1.4rem;">
+    <a class="share-btn" href="#" target="_blank" rel="noopener">
+      ➕ Ouvrir / ajouter à l'album 2026
+    </a>
+  </p>
+
+  <div class="placeholder">
+    <span class="big">🖼️</span>
+    <span>L'album photos & vidéos s'affichera ici</span>
+    <span style="font-weight:600;color:#b98aa8;">(collez le lien de votre album Google Photos)</span>
+  </div>
+</section>
+
+<!-- ============ LIENS VIDÉOS (YOUTUBE) ============ -->
+<section class="block">
+  <div class="block-head"><span class="block-emoji">🎬</span><h2>Nos vidéos</h2></div>
+
+  <div class="block-note">
+    Pour ajouter une vidéo YouTube : copiez son identifiant (la partie après
+    <strong>youtu.be/</strong> ou <strong>watch?v=</strong>) et collez-le à la place de
+    <strong>ID_VIDEO</strong> dans les blocs ci-dessous. Dupliquez un bloc pour chaque vidéo.
+  </div>
+
+  <div class="video-grid">
+
+    <!-- ▼ BLOC VIDÉO À DUPLIQUER — remplacez ID_VIDEO ▼ -->
+    <div class="video-card">
+      <iframe src="https://www.youtube.com/embed/ID_VIDEO"
+              title="Vidéo souvenir 2026"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen loading="lazy"></iframe>
+    </div>
+    <!-- ▲ fin du bloc ▲ -->
+
+    <!-- Copiez le bloc ci-dessus autant de fois que de vidéos -->
+
+  </div>
+</section>
+
+<footer class="site-footer">
+  <p><a class="back-link" href="index.html">← Retour à l'accueil</a></p>
+</footer>
+
+</body>
+</html>
