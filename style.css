@@ -1,0 +1,133 @@
+/* =========================================================
+   LA BANDE — thème "Carnet de voyage"
+   Fond papier, écriture manuscrite, cartes façon polaroid
+   ========================================================= */
+
+:root{
+  --paper:#fdf6e3;
+  --paper-dot:#e8dcc0;
+  --ink:#4a3f35;
+  --ink-soft:#6b5d4f;
+  --rust:#c1502e;
+  --mustard:#e9c46a;
+  --terra:#e76f51;
+  --pine:#2a9d8f;
+  --sky:#457b9d;
+  --card-radius:6px;
+  --shadow:0 10px 22px -10px rgba(74,63,53,.45);
+  --font-hand:"Caveat", cursive;
+  --font-body:"Nunito", system-ui, sans-serif;
+}
+
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  font-family:var(--font-body);
+  color:var(--ink);
+  background:var(--paper);
+  background-image:radial-gradient(var(--paper-dot) 1.5px,transparent 1.5px);
+  background-size:22px 22px;
+  line-height:1.6;
+}
+
+/* ---------- HERO ---------- */
+.hero{position:relative;padding:4.5rem 1.5rem 3.5rem;text-align:center;}
+.hero-inner{max-width:760px;margin:0 auto;position:relative;z-index:1;}
+.eyebrow{
+  display:inline-block;font-family:var(--font-hand);font-size:1.35rem;font-weight:700;
+  color:var(--paper);background:var(--ink);padding:.15rem 1rem;border-radius:999px;
+  transform:rotate(-2deg);margin:0 0 1rem;
+}
+.hero-title{font-family:var(--font-hand);font-size:clamp(4rem,15vw,7rem);line-height:.9;margin:0;color:var(--rust);font-weight:700;}
+.hero-sub{font-family:var(--font-hand);font-size:clamp(1.4rem,4vw,2rem);color:var(--ink-soft);margin:.6rem auto 1.8rem;max-width:30ch;}
+.scroll-cue{
+  display:inline-block;font-family:var(--font-hand);font-size:1.4rem;font-weight:700;
+  text-decoration:none;color:var(--paper);background:var(--terra);padding:.4rem 1.5rem;
+  border-radius:999px;box-shadow:var(--shadow);transform:rotate(-1deg);transition:transform .15s ease;
+}
+.scroll-cue:hover{transform:rotate(-1deg) translateY(-3px) scale(1.04);}
+
+/* ---------- ANNÉES ---------- */
+.years{max-width:1000px;margin:0 auto;padding:2.5rem 1.5rem 3rem;}
+.section-title{font-family:var(--font-hand);font-size:clamp(2.4rem,7vw,3.4rem);text-align:center;color:var(--ink);margin:0 0 2.2rem;}
+.year-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1.8rem;}
+.year-card{
+  position:relative;display:flex;flex-direction:column;gap:.3rem;
+  padding:1.6rem 1.4rem 1.3rem;border-radius:var(--card-radius);text-decoration:none;
+  color:#fff;box-shadow:var(--shadow);min-height:210px;transition:transform .18s ease, box-shadow .18s ease;
+}
+.year-card::before{
+  content:"";position:absolute;top:-10px;left:50%;width:64px;height:22px;margin-left:-32px;
+  background:#ffffff88;border:1px solid #ffffffaa;transform:rotate(-3deg);border-radius:2px;
+}
+.year-card:hover{transform:translateY(-6px) rotate(0deg);box-shadow:0 16px 30px -12px rgba(74,63,53,.5);}
+.y2024{background:var(--mustard);color:var(--ink);transform:rotate(-2deg);}
+.y2025{background:var(--terra);transform:rotate(1.5deg);}
+.y2026{background:var(--pine);transform:rotate(-1deg);}
+.year-tag{font-family:var(--font-hand);font-size:1.3rem;font-weight:700;opacity:.9;}
+.year-num{font-family:var(--font-hand);font-size:3.6rem;line-height:.9;font-weight:700;}
+.year-place{font-weight:700;font-size:.95rem;margin-top:.2rem;}
+.year-go{margin-top:auto;font-family:var(--font-hand);font-size:1.35rem;font-weight:700;}
+
+/* ---------- PAGE ANNÉE : barre ---------- */
+.year-page .topbar{
+  position:sticky;top:0;z-index:10;display:flex;align-items:center;justify-content:space-between;
+  padding:.9rem 1.3rem;background:#fdf6e3ee;backdrop-filter:blur(6px);border-bottom:2px dashed var(--paper-dot);
+}
+.back-link{font-family:var(--font-hand);font-size:1.3rem;font-weight:700;text-decoration:none;color:var(--ink);}
+.topbar .badge{font-family:var(--font-hand);font-size:1.4rem;font-weight:700;color:var(--rust);}
+
+/* ---------- PAGE ANNÉE : en-tête ---------- */
+.year-hero{text-align:center;padding:3rem 1.5rem 2.5rem;color:#fff;position:relative;}
+.year-hero::after{
+  content:"";position:absolute;left:0;right:0;bottom:0;height:14px;
+  background:repeating-linear-gradient(-45deg,#fdf6e3,#fdf6e3 8px,transparent 8px,transparent 16px);
+}
+.year-hero.h2024{background:var(--mustard);color:var(--ink);}
+.year-hero.h2025{background:var(--terra);}
+.year-hero.h2026{background:var(--pine);}
+.year-hero h1{font-family:var(--font-hand);font-size:clamp(3.5rem,13vw,6rem);margin:0;line-height:.9;font-weight:700;}
+.year-hero .place{
+  display:inline-block;margin-top:.6rem;font-family:var(--font-hand);font-size:1.5rem;font-weight:700;
+  background:#ffffff3a;padding:.2rem 1.1rem;border-radius:999px;
+}
+
+/* ---------- BLOCS ---------- */
+.block{max-width:900px;margin:0 auto;padding:3rem 1.5rem;}
+.block-head{display:flex;align-items:center;gap:.6rem;margin:0 0 1.2rem;}
+.block-head h2{font-family:var(--font-hand);font-size:clamp(2rem,6vw,2.8rem);margin:0;color:var(--ink);}
+.block-emoji{font-size:1.9rem;}
+.block-note{
+  background:#fff;border:2px dashed var(--terra);border-radius:8px;padding:.9rem 1.1rem;
+  font-weight:600;font-size:.95rem;color:var(--ink-soft);margin-bottom:1.4rem;
+}
+.embed-frame{width:100%;aspect-ratio:16/10;border:0;border-radius:8px;box-shadow:var(--shadow);background:#fff;}
+.placeholder{
+  display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:.6rem;
+  width:100%;aspect-ratio:16/10;border:3px dashed var(--mustard);border-radius:8px;
+  background:#fff;color:var(--ink-soft);font-weight:700;padding:2rem;
+}
+.placeholder .big{font-size:2.5rem;}
+.video-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.4rem;}
+.video-card{border-radius:8px;overflow:hidden;box-shadow:var(--shadow);background:#000;border:6px solid #fff;}
+.video-card iframe{width:100%;aspect-ratio:16/9;border:0;display:block;}
+.share-btn{
+  display:inline-flex;align-items:center;gap:.5rem;font-family:var(--font-hand);font-size:1.4rem;font-weight:700;
+  text-decoration:none;color:#fff;background:var(--pine);padding:.4rem 1.4rem;border-radius:999px;
+  box-shadow:var(--shadow);transform:rotate(-1deg);transition:transform .15s ease;
+}
+.share-btn:hover{transform:rotate(-1deg) translateY(-3px);}
+
+/* ---------- PIED ---------- */
+.site-footer{text-align:center;padding:2.5rem 1.5rem;color:var(--ink-soft);font-family:var(--font-hand);font-size:1.25rem;font-weight:700;}
+.site-footer a{color:var(--rust);}
+
+/* ---------- A11Y / MOBILE ---------- */
+a:focus-visible,.share-btn:focus-visible{outline:3px solid var(--ink);outline-offset:3px;}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto;}}
+@media(max-width:520px){
+  .hero{padding:3.5rem 1.2rem 3rem;}
+  .block{padding:2.2rem 1.2rem;}
+  .year-card{transform:none !important;}
+}
